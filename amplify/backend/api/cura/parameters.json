@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "cura",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": "false",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authcura579a27f2",
+            "Outputs.UserPoolId"
+        ]
+    }
+}

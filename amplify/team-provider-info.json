@@ -1,0 +1,19 @@
+{
+    "master": {
+        "awscloudformation": {
+            "AuthRoleName": "cura-master-20190927152149-authRole",
+            "UnauthRoleArn": "arn:aws:iam::258394178435:role/cura-master-20190927152149-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::258394178435:role/cura-master-20190927152149-authRole",
+            "Region": "ap-northeast-1",
+            "DeploymentBucketName": "cura-master-20190927152149-deployment",
+            "UnauthRoleName": "cura-master-20190927152149-unauthRole",
+            "StackName": "cura-master-20190927152149",
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:258394178435:stack/cura-master-20190927152149/16f4fa70-e0ef-11e9-a36b-0e36924addac"
+        },
+        "categories": {
+            "auth": {
+                "cura579a27f2": {}
+            }
+        }
+    }
+}

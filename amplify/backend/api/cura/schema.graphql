@@ -1,0 +1,181 @@
+type Chat @model{
+	id: ID!
+	chatid: ID!
+	username: String
+	content: String
+	chatstatus: Boolean!
+	createdAt:AWSDateTime
+	customers:Customer @connection(name:"CustomerChat")
+}
+
+type Customer @model{
+	id: ID!
+	customerid: ID!
+	firstname: String
+	lastname: String
+	firstruby: String
+	lastruby: String
+	male: String
+	birthday:Int
+	year: Int
+	month:Int
+	day:Int
+	adress:String
+	phoneNumber: String
+	mobilePhoneNumber: String
+	email: String
+	emergencyfamily: String
+	emergencycontact: String
+	customerstatus: Boolean!
+	chat:[Chat] @connection(name:"CustomerChat")
+}
+
+type Helper @model{
+	helperid: ID!
+	firstname: String
+	lastname: String
+	firstruby: String
+	lastruby: String
+	male: String
+	birthday:Int
+	year: Int
+	month:Int
+	day:Int
+	mobilephoneNumber:String
+	line:String
+	helperStatus:Boolean
+}
+
+type Task @model{
+	id: ID!
+	taskid: ID!
+	username: String
+	tasktitle: String
+	taskcontent: String
+	deadline: String
+	createdAt:AWSDateTime
+	updatedAt:AWSDateTime
+	taskStatus: Boolean
+}
+
+type After @model{
+	id:ID!
+	customername:String
+	username:String
+	infoSource:String
+	status:String
+	start:String
+	startTime:String
+	end:String
+	endTime:String
+	contact:String
+	check:String
+	createdAt:AWSDateTime
+	updatedAt:AWSDateTime
+	content:String
+}
+
+type Before @model{
+	id:ID!
+	customername:String
+	username:String
+	infoSource:String
+	status:String
+	start:String
+	startTime:String
+	end:String
+	endTime:String
+	contact:String
+	check:String
+	createdAt:AWSDateTime
+	updatedAt:AWSDateTime
+	content:String
+}
+
+type CustomerStatus @model{
+	id:ID!
+	customername:String
+	username:String	
+	infoSource:String
+	status:String
+	start:String
+	end:String
+	hospitalname:String
+	contact:String
+	content:String
+}
+
+type NewCare @model{
+	id:ID!
+	customername:String
+	username:String	
+	infoSource:String
+	status:String
+	start:String
+	end:String
+	content:String
+	contact:String
+	
+}
+
+
+
+type Publicize@model{
+	id:ID!
+	customername:String
+	username:String	
+	infoSource:String
+	start:String
+	end:String
+	contact:String
+	content:String
+}
+
+type HelperSick @model{
+	id:ID!
+	helpername:String
+	username:String	
+	infoSource:String
+	status:String
+	start:String
+	end:String
+	contact:String
+	content:String
+}
+
+type Contact @model{
+	id:ID!
+	customername:String
+	username:String	
+	infoSource:String
+	toWhom:String
+	contactPhoneNumber:String
+	start:String
+	end:String
+	contact:String
+	content:String
+	contactUs:Boolean
+}
+
+type Report @model{
+	id:ID!
+	customername:String
+	username:String	
+	infoSource:String
+	contact:String
+	content:String
+	start:String
+	end:String
+}
+
+type Shopping @model{
+	id:ID!
+	customername:String
+	username:String	
+	infoSource:String
+	start:String
+	end:String
+	shopname:String
+	contact:String
+	content:String
+}
